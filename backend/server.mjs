@@ -2,15 +2,10 @@ import http from 'node:http';
 import fs from 'node:fs';
 import { generatePredictions } from './prediction_engine.mjs';
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 function getApiKey() {
-  const env = fs.readFileSync(
-    new URL('../.env', import.meta.url),
-    'utf8'
-  );
-
-  return env.match(/^FOOTBALL_API_KEY=(.+)$/m)?.[1]?.trim();
+  return process.env.FOOTBALL_API_KEY?.trim();
 }
 
 let cachedFixtures = null;
