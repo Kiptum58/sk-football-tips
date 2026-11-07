@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "SK Football Tips",
+    "slug": "sk-football-tips",
+    "scheme": "skfootballtips",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.skfootballtips.app",
+      "versionCode": 1
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar"
+    ]
+  }
+}
