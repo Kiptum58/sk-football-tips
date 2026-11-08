@@ -13,6 +13,7 @@ let lastFetch = 0;
 const CACHE_DURATION = 10 * 60 * 1000;
 
 const server = http.createServer(async (req, res) => {
+  console.log('INCOMING REQUEST:', req.method, req.url);
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Content-Type', 'application/json');
 
